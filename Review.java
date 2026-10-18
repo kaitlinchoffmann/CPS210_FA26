@@ -2,7 +2,39 @@ import java.util.Scanner;
 
 public class Review {
 	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		String item = "book";
+		int quantity = 3;
+		double price = 4.5;
 
+		System.out.printf("%-9s%-8s%s\n", "Item", "Qty", "Price");
+		System.out.printf("%-9s%-8d%.2f\n", item, quantity, price);
+
+		System.out.println("\n");
+		System.out.print("Enter tablespoons: ");
+		int tb = sc.nextInt();
+
+		int cups = tb / 16;
+		int tb2 = tb %16;
+
+		System.out.println(tb + " tablespoons make up " + cups
+	 		+ " cups and " + tb2 + " remaining tablespoons \n");
+
+		System.out.print("Enter a 3 digit number with no digits repeated:");
+		int num = sc.nextInt();
+		int ones = num % 10;
+		num = num /10;
+		int tens = num % 10;
+		num = num/10;
+		int hundreds = num % 10;
+		if(ones != tens && tens != hundreds && ones != hundreds) {
+			System.out.println("Valid number entered");
+		} else {
+			System.out.println("Number not valid!");
+
+		}
+/*
 		Scanner sc = new Scanner(System.in);
 
 // q6 lab 5
@@ -129,9 +161,9 @@ public class Review {
 				+ ounces + " ounces");
 
 // Lab 	
-		/*
-		int a = 1;
-		int b = 2;*/
+		
+		//int a = 1;
+		//int b = 2;
 		System.out.print("Give me two integers NOW!");
 		int a = sc.nextInt();
 		int b = sc.nextInt();
@@ -148,7 +180,7 @@ public class Review {
 		b++;
 		System.out.printf("%-6d%-6d%.0f\n", a, b, Math.pow(a, b));
 
-
+*/
 	}
 }
 
